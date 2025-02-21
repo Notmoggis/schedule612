@@ -1,0 +1,171 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin: 30px 0 20px;
+}
+
+/* Tabla de horario */
+.schedule table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+}
+
+.schedule th, .schedule td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.schedule th {
+    background-color: #0b4972;
+    color: white;
+}
+
+.schedule td input {
+    width: 90%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #222;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Efectos de hover */
+.schedule td input:focus {
+    border: 2px solid #0b4972;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.schedule td input::placeholder {
+    color: #111;
+}
+
+/* Sección de materias y profesores */
+.professor-section {
+    margin-top: 40px;
+}
+
+.subjects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.subject {
+    width: 45%;
+    margin: 10px;
+}
+
+.subject input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #111;
+}
+
+.subject input:focus {
+    border: 2px solid #0b4972;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.subject input::placeholder {
+    color: #333;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+    .subjects .subject {
+        width: 48%;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .schedule th, .schedule td {
+        padding: 10px;
+    }
+
+    .schedule td input {
+        width: 100%;
+    }
+
+    .subjects .subject {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .schedule th, .schedule td {
+        padding: 8px;
+    }
+
+    .subjects .subject {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .schedule table {
+        font-size: 0.9rem;
+    }
+
+    .schedule td input {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+}
